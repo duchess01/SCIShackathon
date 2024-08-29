@@ -60,9 +60,9 @@ const model = ref([
                 ]
             },
             {
-                label: 'Crud',
+                label: 'rewards',
                 icon: 'pi pi-fw pi-pencil',
-                to: '/pages/crud'
+                to: '/pages/rewards'
             },
             {
                 label: 'Not Found',

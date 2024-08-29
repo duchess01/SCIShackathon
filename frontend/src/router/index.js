@@ -95,9 +95,9 @@ const router = createRouter({
                     component: () => import('@/views/pages/Empty.vue')
                 },
                 {
-                    path: '/pages/crud',
-                    name: 'crud',
-                    component: () => import('@/views/pages/Crud.vue')
+                    path: '/pages/rewards',
+                    name: 'rewards',
+                    component: () => import('@/views/pages/rewards.vue')
                 },
                 {
                     path: '/documentation',
