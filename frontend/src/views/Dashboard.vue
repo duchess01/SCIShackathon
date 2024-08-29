@@ -9,7 +9,6 @@ import { FilterMatchMode, FilterOperator } from '@primevue/core/api';
 const customers1 = ref(null);
 const filters1 = ref(null);
 const loading1 = ref(null);
-const products = ref(null);
 const chartData = ref(null);
 const chartOptions = ref(null);
 const { getPrimary, getSurface, isDarkTheme } = useLayout();
@@ -29,6 +28,43 @@ const representatives = reactive([
     { name: 'Stephen Shaw', image: 'stephenshaw.png' },
     { name: 'XuXue Feng', image: 'xuxuefeng.png' }
 ]);
+
+
+const displayConfirmation = ref(false);
+const products = ref(null);
+const verified = ref(false); 
+
+onMounted(() => {
+    ProductService.getProductsSmall().then((data) => (products.value = data));
+});
+
+
+
+const currentTask = ref(null); // Store the task currently being interacted with
+
+function openConfirmation(task) {
+    currentTask.value = task; // Set the task to the one being interacted with
+    displayConfirmation.value = true;
+}
+
+function closeConfirmation() {
+    displayConfirmation.value = false;
+    currentTask.value = null;
+}
+
+function approveTask() {
+    if (currentTask.value) {
+        currentTask.value.verified = true; // Update the task's verified status to true
+    }
+    closeConfirmation();
+}
+
+function rejectTask() {
+    if (currentTask.value) {
+        currentTask.value.verified = false; // Update the task's verified status to false
+    }
+    closeConfirmation();
+}
 
 
 onBeforeMount(() => {
@@ -65,7 +101,6 @@ function formatDate(value) {
         year: 'numeric'
     });
 }
-
 
 onMounted(() => {
     ProductService.getProductsSmall().then((data) => (products.value = data));
@@ -322,18 +357,35 @@ watch([getPrimary, getSurface, isDarkTheme], () => {
        
 
 
-            <Column field="verified" header="Verified" dataType="boolean" bodyClass="text-center" style="min-width: 8rem">
+            <Column field="verified" header="Verified" dataType="boolean" bodyClass="text-center" style="min-width: 12rem">
                 <template #body="{ data }">
-                    <i class="pi" :class="{ 'pi-check-circle text-green-500 ': data.verified, 'pi-times-circle text-red-500': !data.verified }"></i>
-                </template>
-                <template #filter="{ filterModel }">
-                    <label for="verified-filter" class="font-bold"> Verified </label>
-                    <Checkbox v-model="filterModel.value" :indeterminate="filterModel.value === null" binary inputId="verified-filter" />
-                </template>
-            </Column>
+                    <div class="flex items-center justify-center">
+                        <i class="pi" :class="{ 'pi-check-circle text-green-500': data.verified, 'pi-times-circle text-red-500': !data.verified }" style="margin-right: 1rem;"></i>
+                        <!-- Edit icon -->
+                        <Button icon="pi pi-pencil" style="width: auto; background-color: white; border: none; color: black;" @click="openConfirmation(data)" />
+             
+                        <Dialog header="Confirmation" v-model:visible="displayConfirmation" :style="{ width: '350px' }" :modal="true">
+            <div class="flex items-center justify-center">
+                <i class="pi pi-exclamation-triangle mr-4" style="font-size: 2rem" />
+                <span>Do you want to approve this task?</span>
+            </div>
+            <template #footer>
+                <Button label="Approve" icon="pi pi-check" @click="approveTask" text severity="secondary" />
+                <Button label="Reject" icon="pi pi-times" @click="rejectTask" severity="danger" outlined autofocus />
+            </template>
+        </Dialog>
+
+        </div>
+    </template>
+    <template #filter="{ filterModel }">
+        <label for="verified-filter" class="font-bold"> Verified </label>
+        <Checkbox v-model="filterModel.value" :indeterminate="filterModel.value === null" binary inputId="verified-filter" />
+    </template>
+</Column>
+
         </DataTable>
 
 
-    
 
+            
 </template>
