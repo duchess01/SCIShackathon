@@ -19,8 +19,8 @@
               :class="index % 2 === 0 ? 'bg-gray-100' : 'bg-gray-200'"
               class="flex justify-between items-center p-3 mb-2 rounded-md"
             >
-              <span class="font-bold text-3xl">{{ user.name }}</span>
-              <span class="text-gray-600 font-bold text-3xl">{{ user.score }} Points</span>
+              <span class="font-bold text-xl">{{ user.name }}</span>
+              <span class="text-gray-600 font-bold text-xl">{{ user.score }} Points</span>
             </li>
           </ul>
         </div>
@@ -37,7 +37,7 @@
           <h3 class="font-bold text-xl mb-2">{{ reward.name }}</h3>
           <p class="text-gray-500 font-semibold text-lg mb-4">{{ reward.requiredKarma }} Karma</p>
           <button
-            class="bg-green-500 text-white py-4 px-8 text-4xl font-bold rounded-md hover:bg-green-800 transition duration-300 w-full"
+            class="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-800 transition duration-300"
             :disabled="karmaPoints < reward.requiredKarma"
             @click="redeemReward(reward)"
           >
@@ -48,6 +48,7 @@
     </div>
   </template>
   
+  // remove when connecting to db
   <script>
   export default {
     data() {
