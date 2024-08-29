@@ -1,10 +1,9 @@
 <script setup>
 import { ProductService } from '@/service/ProductService';
+import { TaskService } from '@/service/TaskService';
 import { onMounted, ref } from 'vue';
 
 const products = ref(null);
-const picklistProducts = ref(null);
-const orderlistProducts = ref(null);
 const options = ref(['list', 'grid']);
 const layout = ref('list');
 
@@ -45,6 +44,8 @@ function getSeverity(product) {
                                 <i :class="[option === 'list' ? 'pi pi-bars' : 'pi pi-table']" />
                             </template>
                         </SelectButton>
+                      
+
                     </div>
                 </template>
 
@@ -80,8 +81,9 @@ function getSeverity(product) {
                                     <div class="flex flex-col md:items-end gap-8">
                                         <span class="text-xl font-semibold">${{ item.price }}</span>
                                         <div class="flex flex-row-reverse md:flex-row gap-2">
-                                            <Button icon="pi pi-heart" outlined></Button>
-                                            <Button icon="pi pi-shopping-cart" label="Buy Now" :disabled="item.inventoryStatus === 'OUTOFSTOCK'" class="flex-auto md:flex-initial whitespace-nowrap"></Button>
+                                            <Button icon="pi pi-times" severity="danger" rounded />
+                                            <Button icon="pi pi-check" rounded />
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -124,8 +126,11 @@ function getSeverity(product) {
                                     <div class="flex flex-col gap-6 mt-6">
                                         <span class="text-2xl font-semibold">${{ item.price }}</span>
                                         <div class="flex gap-2">
-                                            <Button icon="pi pi-shopping-cart" label="Buy Now" :disabled="item.inventoryStatus === 'OUTOFSTOCK'" class="flex-auto whitespace-nowrap"></Button>
-                                            <Button icon="pi pi-heart" outlined></Button>
+                                           
+                                            <Button icon="pi pi-check" style="margin-right: 70%;" rounded />
+                                        
+                                            <Button icon="pi pi-times" severity="danger" rounded />
+
                                         </div>
                                     </div>
                                 </div>
@@ -136,28 +141,5 @@ function getSeverity(product) {
             </DataView>
         </div>
 
-        <div class="flex flex-col lg:flex-row gap-8">
-            <div class="lg:w-2/3">
-                <div class="card">
-                    <div class="font-semibold text-xl mb-4">PickList</div>
-                    <PickList v-model="picklistProducts" breakpoint="1400px" dataKey="id">
-                        <template #option="{ option }">
-                            {{ option.name }}
-                        </template>
-                    </PickList>
-                </div>
-            </div>
-
-            <div class="lg:w-1/3">
-                <div class="card">
-                    <div class="font-semibold text-xl mb-4">OrderList</div>
-                    <OrderList v-model="orderlistProducts" breakpoint="1400px" dataKey="id" pt:pcList:root="w-full">
-                        <template #option="{ option }">
-                            {{ option.name }}
-                        </template>
-                    </OrderList>
-                </div>
-            </div>
         </div>
-    </div>
 </template>

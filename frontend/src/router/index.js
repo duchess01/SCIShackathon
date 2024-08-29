@@ -13,6 +13,12 @@ const router = createRouter({
                     name: 'dashboard',
                     component: () => import('@/views/Dashboard.vue')
                 },
+
+                {
+                    path: '/rewards',
+                    name: 'Rewards',
+                    component: () => import('@/views/Rewards.vue')
+                },
                 {
                     path: '/uikit/formlayout',
                     name: 'formlayout',
@@ -97,7 +103,7 @@ const router = createRouter({
                 {
                     path: '/pages/rewards',
                     name: 'rewards',
-                    component: () => import('@/views/pages/rewards.vue')
+                    component: () => import('@/views/Rewards.vue')
                 },
                 {
                     path: '/documentation',
