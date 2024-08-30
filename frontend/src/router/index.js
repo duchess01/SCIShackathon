@@ -20,9 +20,9 @@ const router = createRouter({
                     component: () => import('@/views/Rewards.vue')
                 },
                 {
-                    path: '/uikit/formlayout',
-                    name: 'formlayout',
-                    component: () => import('@/views/uikit/FormLayout.vue')
+                    path: '/tasks',
+                    name: 'tasks',
+                    component: () => import('@/views/tasks.vue')
                 },
                 {
                     path: '/uikit/input',
