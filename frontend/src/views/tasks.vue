@@ -73,7 +73,7 @@ export default {
       currentView: 'accept', 
       availableTasks: [
         {
-          id: 1,
+          id: 1, 
           title: 'Kill a Lizard',
           description: 'Kill a lizard in the backyard.',
           location: 'abc street',
