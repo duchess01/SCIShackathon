@@ -29,7 +29,7 @@ function smoothScroll(id) {
                             />
                         </g>
                     </svg>
-                    <span class="text-surface-900 dark:text-surface-0 font-medium text-2xl leading-normal mr-20">SAKAI</span>
+                    <span class="text-surface-900 dark:text-surface-0 font-medium text-2xl leading-normal mr-20">Karmunity</span>
                 </a>
                 <Button
                     class="lg:!hidden"
@@ -49,17 +49,17 @@ function smoothScroll(id) {
                         </li>
                         <li>
                             <a @click="smoothScroll('#features')" class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl">
-                                <span>Features</span>
+                                <span>Rewards</span>
                             </a>
                         </li>
                         <li>
                             <a @click="smoothScroll('#highlights')" class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl">
-                                <span>Highlights</span>
+                                <span>Leaderboard</span>
                             </a>
                         </li>
                         <li>
                             <a @click="smoothScroll('#pricing')" class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl">
-                                <span>Pricing</span>
+                                <span>Profile</span>
                             </a>
                         </li>
                     </ul>
@@ -73,11 +73,11 @@ function smoothScroll(id) {
             <div
                 id="hero"
                 class="flex flex-col pt-6 px-6 lg:px-20 overflow-hidden"
-                style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, rgb(238, 239, 175) 0%, rgb(195, 227, 250) 100%); clip-path: ellipse(150% 87% at 93% 13%)"
+                style="background-color: #ffc885; background-image: linear-gradient(0deg, #ffc885 0%, #B5FFFC 100%);"
             >
                 <div class="mx-6 md:mx-20 mt-0 md:mt-6">
-                    <h1 class="text-6xl font-bold text-gray-900 leading-tight"><span class="font-light block">Eu sem integer</span>eget magna fermentum</h1>
-                    <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700">Sed blandit libero volutpat sed cras. Fames ac turpis egestas integer. Placerat in egestas erat...</p>
+                    <h1 class="text-6xl font-bold text-gray-900 leading-tight"><span class="font-light block">Gain Karma</span>Improve lives</h1>
+                    <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700">Be a community hero and improve the lives of the elderly in your community</p>
                     <Button label="Get Started" as="router-link" to="/" rounded class="!text-xl mt-8 !px-4"></Button>
                 </div>
                 <div class="flex justify-center md:justify-end">
@@ -88,8 +88,8 @@ function smoothScroll(id) {
             <div id="features" class="py-6 px-6 lg:px-20 mt-8 mx-0 lg:mx-20">
                 <div class="grid grid-cols-12 gap-4 justify-center">
                     <div class="col-span-12 text-center mt-20 mb-6">
-                        <div class="text-surface-900 dark:text-surface-0 font-normal mb-2 text-4xl">Marvelous Features</div>
-                        <span class="text-muted-color text-2xl">Placerat in egestas erat...</span>
+                        <div class="text-surface-900 dark:text-surface-0 font-normal mb-2 text-4xl">Our Features</div>
+                        <span class="text-muted-color text-2xl">Catering to the community!</span>
                     </div>
 
                     <div class="col-span-12 md:col-span-12 lg:col-span-4 p-0 lg:pr-8 lg:pb-8 mt-6 lg:mt-0">
@@ -100,8 +100,8 @@ function smoothScroll(id) {
                                 <div class="flex items-center justify-center bg-yellow-200 mb-4" style="width: 3.5rem; height: 3.5rem; border-radius: 10px">
                                     <i class="pi pi-fw pi-users !text-2xl text-yellow-700"></i>
                                 </div>
-                                <h5 class="mb-2 text-surface-900 dark:text-surface-0">Easy to Use</h5>
-                                <span class="text-surface-600 dark:text-surface-200">Posuere morbi leo urna molestie.</span>
+                                <h5 class="mb-2 text-surface-900 dark:text-surface-0">Post tasks</h5>
+                                <span class="text-surface-600 dark:text-surface-200">Elderly and community organisations can post tasks that need to be done.</span>
                             </div>
                         </div>
                     </div>
@@ -114,8 +114,8 @@ function smoothScroll(id) {
                                 <div class="flex items-center justify-center bg-cyan-200 mb-4" style="width: 3.5rem; height: 3.5rem; border-radius: 10px">
                                     <i class="pi pi-fw pi-palette !text-2xl text-cyan-700"></i>
                                 </div>
-                                <h5 class="mb-2 text-surface-900 dark:text-surface-0">Fresh Design</h5>
-                                <span class="text-surface-600 dark:text-surface-200">Semper risus in hendrerit.</span>
+                                <h5 class="mb-2 text-surface-900 dark:text-surface-0">Accept tasks</h5>
+                                <span class="text-surface-600 dark:text-surface-200">Members of the community can accept the tasks that they are able to do.</span>
                             </div>
                         </div>
                     </div>
@@ -128,8 +128,8 @@ function smoothScroll(id) {
                                 <div class="flex items-center justify-center bg-indigo-200" style="width: 3.5rem; height: 3.5rem; border-radius: 10px">
                                     <i class="pi pi-fw pi-map !text-2xl text-indigo-700"></i>
                                 </div>
-                                <div class="mt-6 mb-1 text-surface-900 dark:text-surface-0 text-xl font-semibold">Well Documented</div>
-                                <span class="text-surface-600 dark:text-surface-200">Non arcu risus quis varius quam quisque.</span>
+                                <div class="mt-6 mb-1 text-surface-900 dark:text-surface-0 text-xl font-semibold">Get rewarded</div>
+                                <span class="text-surface-600 dark:text-surface-200">Get rewarded in the form of Karma Points for each task you complete!</span>
                             </div>
                         </div>
                     </div>
@@ -176,59 +176,18 @@ function smoothScroll(id) {
                         </div>
                     </div>
 
-                    <div class="col-span-12 md:col-span-12 lg:col-span-4 p-0 lg:pr-8 mt-6 lg:mt-0">
-                        <div
-                            style="height: 160px; padding: 2px; border-radius: 10px; background: linear-gradient(90deg, rgba(145, 210, 204, 0.2), rgba(160, 210, 250, 0.2)), linear-gradient(180deg, rgba(187, 199, 205, 0.2), rgba(145, 210, 204, 0.2))"
-                        >
-                            <div class="p-4 bg-surface-0 dark:bg-surface-900 h-full" style="border-radius: 8px">
-                                <div class="flex items-center justify-center bg-teal-200 mb-4" style="width: 3.5rem; height: 3.5rem; border-radius: 10px">
-                                    <i class="pi pi-fw pi-shopping-cart !text-2xl text-teal-700"></i>
-                                </div>
-                                <div class="mt-6 mb-1 text-surface-900 dark:text-surface-0 text-xl font-semibold">Ready to Use</div>
-                                <span class="text-surface-600 dark:text-surface-200">Mauris sit amet massa vitae.</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-span-12 md:col-span-12 lg:col-span-4 p-0 lg:pr-8 mt-6 lg:mt-0">
-                        <div
-                            style="height: 160px; padding: 2px; border-radius: 10px; background: linear-gradient(90deg, rgba(145, 210, 204, 0.2), rgba(212, 162, 221, 0.2)), linear-gradient(180deg, rgba(251, 199, 145, 0.2), rgba(160, 210, 250, 0.2))"
-                        >
-                            <div class="p-4 bg-surface-0 dark:bg-surface-900 h-full" style="border-radius: 8px">
-                                <div class="flex items-center justify-center bg-blue-200 mb-4" style="width: 3.5rem; height: 3.5rem; border-radius: 10px">
-                                    <i class="pi pi-fw pi-globe !text-2xl text-blue-700"></i>
-                                </div>
-                                <div class="mt-6 mb-1 text-surface-900 dark:text-surface-0 text-xl font-semibold">Modern Practices</div>
-                                <span class="text-surface-600 dark:text-surface-200">Elementum nibh tellus molestie nunc non.</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-span-12 md:col-span-12 lg:col-span-4 p-0 lg-4 mt-6 lg:mt-0">
-                        <div
-                            style="height: 160px; padding: 2px; border-radius: 10px; background: linear-gradient(90deg, rgba(160, 210, 250, 0.2), rgba(212, 162, 221, 0.2)), linear-gradient(180deg, rgba(246, 158, 188, 0.2), rgba(212, 162, 221, 0.2))"
-                        >
-                            <div class="p-4 bg-surface-0 dark:bg-surface-900 h-full" style="border-radius: 8px">
-                                <div class="flex items-center justify-center bg-purple-200 mb-4" style="width: 3.5rem; height: 3.5rem; border-radius: 10px">
-                                    <i class="pi pi-fw pi-eye !text-2xl text-purple-700"></i>
-                                </div>
-                                <div class="mt-6 mb-1 text-surface-900 dark:text-surface-0 text-xl font-semibold">Privacy</div>
-                                <span class="text-surface-600 dark:text-surface-200">Neque egestas congue quisque.</span>
-                            </div>
-                        </div>
-                    </div>
 
                     <div
                         class="col-span-12 mt-20 mb-20 p-2 md:p-20"
                         style="border-radius: 20px; background: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, #efe1af 0%, #c3dcfa 100%)"
                     >
                         <div class="flex flex-col justify-center items-center text-center px-4 py-4 md:py-0">
-                            <div class="text-gray-900 mb-2 text-3xl font-semibold">Joséphine Miller</div>
-                            <span class="text-gray-600 text-2xl">Peak Interactive</span>
+                            <div class="text-gray-900 mb-2 text-3xl font-semibold">Jasmine Tan</div>
+                            <span class="text-gray-600 text-2xl">Straits Times</span>
                             <p class="text-gray-900 sm:line-height-2 md:line-height-4 text-2xl mt-6" style="max-width: 800px">
-                                “Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”
+                                "This is what we need in Singapore! By bringing the community together to help the elderly and marginalised, Karmunity has reinvented the Kampung Spirit that we truly needed!"
                             </p>
-                            <img src="/demo/images/landing/peak-logo.svg" class="mt-6" alt="Company logo" />
+                            <img src="/demo/images/landing/strait.jpg"   width="100" height="150" class="mt-6" alt="Company logo" />
                         </div>
                     </div>
                 </div>
@@ -402,7 +361,7 @@ function smoothScroll(id) {
                                     />
                                 </g>
                             </svg>
-                            <h4 class="font-medium text-3xl text-surface-900 dark:text-surface-0">SAKAI</h4>
+                            <h4 class="font-medium text-3xl text-surface-900 dark:text-surface-0">Karmunity</h4>
                         </a>
                     </div>
 
