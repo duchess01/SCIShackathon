@@ -25,6 +25,11 @@ const router = createRouter({
                     component: () => import('@/views/tasks.vue')
                 },
                 {
+                    path: '/createtasks',
+                    name: 'createtasks',
+                    component: () => import('@/views/createtasks.vue')
+                },
+                {
                     path: '/uikit/input',
                     name: 'input',
                     component: () => import('@/views/uikit/InputDoc.vue')

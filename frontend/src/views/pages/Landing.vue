@@ -134,47 +134,6 @@ function smoothScroll(id) {
                         </div>
                     </div>
 
-                    <div class="col-span-12 md:col-span-12 lg:col-span-4 p-0 lg:pr-8 lg:pb-8 mt-6 lg:mt-0">
-                        <div
-                            style="height: 160px; padding: 2px; border-radius: 10px; background: linear-gradient(90deg, rgba(187, 199, 205, 0.2), rgba(251, 199, 145, 0.2)), linear-gradient(180deg, rgba(253, 228, 165, 0.2), rgba(145, 210, 204, 0.2))"
-                        >
-                            <div class="p-4 bg-surface-0 dark:bg-surface-900 h-full" style="border-radius: 8px">
-                                <div class="flex items-center justify-center bg-slate-200 mb-4" style="width: 3.5rem; height: 3.5rem; border-radius: 10px">
-                                    <i class="pi pi-fw pi-id-card !text-2xl text-slate-700"></i>
-                                </div>
-                                <div class="mt-6 mb-1 text-surface-900 dark:text-surface-0 text-xl font-semibold">Responsive Layout</div>
-                                <span class="text-surface-600 dark:text-surface-200">Nulla malesuada pellentesque elit.</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-span-12 md:col-span-12 lg:col-span-4 p-0 lg:pr-8 lg:pb-8 mt-6 lg:mt-0">
-                        <div
-                            style="height: 160px; padding: 2px; border-radius: 10px; background: linear-gradient(90deg, rgba(187, 199, 205, 0.2), rgba(246, 158, 188, 0.2)), linear-gradient(180deg, rgba(145, 226, 237, 0.2), rgba(160, 210, 250, 0.2))"
-                        >
-                            <div class="p-4 bg-surface-0 dark:bg-surface-900 h-full" style="border-radius: 8px">
-                                <div class="flex items-center justify-center bg-orange-200 mb-4" style="width: 3.5rem; height: 3.5rem; border-radius: 10px">
-                                    <i class="pi pi-fw pi-star !text-2xl text-orange-700"></i>
-                                </div>
-                                <div class="mt-6 mb-1 text-surface-900 dark:text-surface-0 text-xl font-semibold">Clean Code</div>
-                                <span class="text-surface-600 dark:text-surface-200">Condimentum lacinia quis vel eros.</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-span-12 md:col-span-12 lg:col-span-4 p-0 lg:pb-8 mt-6 lg:mt-0">
-                        <div
-                            style="height: 160px; padding: 2px; border-radius: 10px; background: linear-gradient(90deg, rgba(251, 199, 145, 0.2), rgba(246, 158, 188, 0.2)), linear-gradient(180deg, rgba(172, 180, 223, 0.2), rgba(212, 162, 221, 0.2))"
-                        >
-                            <div class="p-4 bg-surface-0 dark:bg-surface-900 h-full" style="border-radius: 8px">
-                                <div class="flex items-center justify-center bg-pink-200 mb-4" style="width: 3.5rem; height: 3.5rem; border-radius: 10px">
-                                    <i class="pi pi-fw pi-moon !text-2xl text-pink-700"></i>
-                                </div>
-                                <div class="mt-6 mb-1 text-surface-900 dark:text-surface-0 text-xl font-semibold">Dark Mode</div>
-                                <span class="text-surface-600 dark:text-surface-200">Convallis tellus id interdum velit laoreet.</span>
-                            </div>
-                        </div>
-                    </div>
 
 
                     <div
@@ -193,152 +152,6 @@ function smoothScroll(id) {
                 </div>
             </div>
 
-            <div id="highlights" class="py-6 px-6 lg:px-20 mx-0 my-12 lg:mx-20">
-                <div class="text-center">
-                    <div class="text-surface-900 dark:text-surface-0 font-normal mb-2 text-4xl">Powerful Everywhere</div>
-                    <span class="text-muted-color text-2xl">Amet consectetur adipiscing elit...</span>
-                </div>
-
-                <div class="grid grid-cols-12 gap-4 mt-20 pb-2 md:pb-20">
-                    <div class="flex justify-center col-span-12 lg:col-span-6 bg-purple-100 p-0 order-1 lg:order-none" style="border-radius: 8px">
-                        <img src="/demo/images/landing/mockup.svg" class="w-11/12" alt="mockup mobile" />
-                    </div>
-
-                    <div class="col-span-12 lg:col-span-6 my-auto flex flex-col lg:items-end text-center lg:text-right gap-4">
-                        <div class="flex items-center justify-center bg-purple-200 self-center lg:self-end" style="width: 4.2rem; height: 4.2rem; border-radius: 10px">
-                            <i class="pi pi-fw pi-mobile !text-4xl text-purple-700"></i>
-                        </div>
-                        <div class="leading-none text-surface-900 dark:text-surface-0 text-3xl font-normal">Congue Quisque Egestas</div>
-                        <span class="text-surface-700 dark:text-surface-100 text-2xl leading-normal ml-0 md:ml-2" style="max-width: 650px"
-                            >Lectus arcu bibendum at varius vel pharetra vel turpis nunc. Eget aliquet nibh praesent tristique magna sit amet purus gravida. Sit amet mattis vulputate enim nulla aliquet.</span
-                        >
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-12 gap-4 my-20 pt-2 md:pt-20">
-                    <div class="col-span-12 lg:col-span-6 my-auto flex flex-col text-center lg:text-left lg:items-start gap-4">
-                        <div class="flex items-center justify-center bg-yellow-200 self-center lg:self-start" style="width: 4.2rem; height: 4.2rem; border-radius: 10px">
-                            <i class="pi pi-fw pi-desktop !text-3xl text-yellow-700"></i>
-                        </div>
-                        <div class="leading-none text-surface-900 dark:text-surface-0 text-3xl font-normal">Celerisque Eu Ultrices</div>
-                        <span class="text-surface-700 dark:text-surface-100 text-2xl leading-normal mr-0 md:mr-2" style="max-width: 650px"
-                            >Adipiscing commodo elit at imperdiet dui. Viverra nibh cras pulvinar mattis nunc sed blandit libero. Suspendisse in est ante in. Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi.</span
-                        >
-                    </div>
-
-                    <div class="flex justify-end order-1 sm:order-2 col-span-12 lg:col-span-6 bg-yellow-100 p-0" style="border-radius: 8px">
-                        <img src="/demo/images/landing/mockup-desktop.svg" class="w-11/12" alt="mockup" />
-                    </div>
-                </div>
-            </div>
-
-            <div id="pricing" class="py-6 px-6 lg:px-20 my-2 md:my-6">
-                <div class="text-center mb-6">
-                    <div class="text-surface-900 dark:text-surface-0 font-normal mb-2 text-4xl">Matchless Pricing</div>
-                    <span class="text-muted-color text-2xl">Amet consectetur adipiscing elit...</span>
-                </div>
-
-                <div class="grid grid-cols-12 gap-4 justify-between mt-20 md:mt-0">
-                    <div class="col-span-12 lg:col-span-4 p-0 md:p-4">
-                        <div class="p-4 flex flex-col border-surface-200 dark:border-surface-600 pricing-card cursor-pointer border-2 hover:border-primary duration-300 transition-all" style="border-radius: 10px">
-                            <div class="text-surface-900 dark:text-surface-0 text-center my-8 text-3xl">Free</div>
-                            <img src="/demo/images/landing/free.svg" class="w-10/12 mx-auto" alt="free" />
-                            <div class="my-8 flex flex-col items-center gap-4">
-                                <div class="flex items-center">
-                                    <span class="text-5xl font-bold mr-2 text-surface-900 dark:text-surface-0">$0</span>
-                                    <span class="text-surface-600 dark:text-surface-200">per month</span>
-                                </div>
-                                <Button label="Get Started" class="p-button-rounded border-0 ml-4 font-light leading-tight bg-blue-500 text-white"></Button>
-                            </div>
-                            <Divider class="w-full bg-surface-200"></Divider>
-                            <ul class="my-8 list-none p-0 flex text-surface-900 dark:text-surface-0 flex-col px-8">
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Responsive Layout</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Unlimited Push Messages</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">50 Support Ticket</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Free Shipping</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-span-12 lg:col-span-4 p-0 md:p-4 mt-6 md:mt-0">
-                        <div class="p-4 flex flex-col border-surface-200 dark:border-surface-600 pricing-card cursor-pointer border-2 hover:border-primary duration-300 transition-all" style="border-radius: 10px">
-                            <div class="text-surface-900 dark:text-surface-0 text-center my-8 text-3xl">Startup</div>
-                            <img src="/demo/images/landing/startup.svg" class="w-10/12 mx-auto" alt="startup" />
-                            <div class="my-8 flex flex-col items-center gap-4">
-                                <div class="flex items-center">
-                                    <span class="text-5xl font-bold mr-2 text-surface-900 dark:text-surface-0">$1</span>
-                                    <span class="text-surface-600 dark:text-surface-200">per month</span>
-                                </div>
-                                <Button label="Get Started" class="p-button-rounded border-0 ml-4 font-light leading-tight bg-blue-500 text-white"></Button>
-                            </div>
-                            <Divider class="w-full bg-surface-200"></Divider>
-                            <ul class="my-8 list-none p-0 flex text-surface-900 dark:text-surface-0 flex-col px-8">
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Responsive Layout</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Unlimited Push Messages</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">50 Support Ticket</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Free Shipping</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-span-12 lg:col-span-4 p-0 md:p-4 mt-6 md:mt-0">
-                        <div class="p-4 flex flex-col border-surface-200 dark:border-surface-600 pricing-card cursor-pointer border-2 hover:border-primary duration-300 transition-all" style="border-radius: 10px">
-                            <div class="text-surface-900 dark:text-surface-0 text-center my-8 text-3xl">Enterprise</div>
-                            <img src="/demo/images/landing/enterprise.svg" class="w-10/12 mx-auto" alt="enterprise" />
-                            <div class="my-8 flex flex-col items-center gap-4">
-                                <div class="flex items-center">
-                                    <span class="text-5xl font-bold mr-2 text-surface-900 dark:text-surface-0">$5</span>
-                                    <span class="text-surface-600 dark:text-surface-200">per month</span>
-                                </div>
-                                <Button label="Get Started" class="p-button-rounded border-0 ml-4 font-light leading-tight bg-blue-500 text-white"></Button>
-                            </div>
-                            <Divider class="w-full bg-surface-200"></Divider>
-                            <ul class="my-8 list-none p-0 flex text-surface-900 dark:text-surface-0 flex-col px-8">
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Responsive Layout</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Unlimited Push Messages</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">50 Support Ticket</span>
-                                </li>
-                                <li class="py-2">
-                                    <i class="pi pi-fw pi-check text-xl text-cyan-500 mr-2"></i>
-                                    <span class="text-xl leading-normal">Free Shipping</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="py-6 px-6 mx-0 mt-20 lg:mx-20">
                 <div class="grid grid-cols-12 gap-4">
@@ -370,17 +183,12 @@ function smoothScroll(id) {
                             <div class="col-span-12 md:col-span-3">
                                 <h4 class="font-medium text-2xl leading-normal mb-4 text-surface-900 dark:text-surface-0">Company</h4>
                                 <a class="leading-normal text-xl block cursor-pointer mb-2 text-surface-700 dark:text-surface-100">About Us</a>
-                                <a class="leading-normal text-xl block cursor-pointer mb-2 text-surface-700 dark:text-surface-100">News</a>
-                                <a class="leading-normal text-xl block cursor-pointer mb-2 text-surface-700 dark:text-surface-100">Investor Relations</a>
-                                <a class="leading-normal text-xl block cursor-pointer mb-2 text-surface-700 dark:text-surface-100">Careers</a>
-                                <a class="leading-normal text-xl block cursor-pointer text-surface-700 dark:text-surface-100">Media Kit</a>
                             </div>
 
                             <div class="col-span-12 md:col-span-3">
                                 <h4 class="font-medium text-2xl leading-normal mb-4 text-surface-900 dark:text-surface-0">Resources</h4>
                                 <a class="leading-normal text-xl block cursor-pointer mb-2 text-surface-700 dark:text-surface-100">Get Started</a>
-                                <a class="leading-normal text-xl block cursor-pointer mb-2 text-surface-700 dark:text-surface-100">Learn</a>
-                                <a class="leading-normal text-xl block cursor-pointer text-surface-700 dark:text-surface-100">Case Studies</a>
+
                             </div>
 
                             <div class="col-span-12 md:col-span-3">
@@ -393,7 +201,6 @@ function smoothScroll(id) {
 
                             <div class="col-span-12 md:col-span-3">
                                 <h4 class="font-medium text-2xl leading-normal mb-4 text-surface-900 dark:text-surface-0">Legal</h4>
-                                <a class="leading-normal text-xl block cursor-pointer mb-2 text-surface-700 dark:text-surface-100">Brand Policy</a>
                                 <a class="leading-normal text-xl block cursor-pointer mb-2 text-surface-700 dark:text-surface-100">Privacy Policy</a>
                                 <a class="leading-normal text-xl block cursor-pointer text-surface-700 dark:text-surface-100">Terms of Service</a>
                             </div>

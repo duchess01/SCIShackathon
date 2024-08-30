@@ -4,7 +4,7 @@
     <nav class="navbar">
       <div class="navbar-links">
         <button @click="currentView = 'accept'" :class="{ active: currentView === 'accept' }">Accept Task</button>
-        <button @click="currentView = 'current'" :class="{ active: currentView === 'current' }">Current Tasks</button>
+        <button @click="currentView = 'current'" :class="{ active: currentView === 'current' }">Accepted Tasks</button>
       </div>
     </nav>
     <br>
@@ -27,7 +27,7 @@
     </div>
 
     <div v-if="currentView === 'current'">
-      <h2>Current Tasks</h2>
+      <h2>Accepted Tasks</h2>
       <p>Here are the current tasks you have accepted. Details of tasks and status will be shown here.</p>
       <div class="card-container">
         <div class="card" v-for="task in currentTasks" :key="task.id">
@@ -62,7 +62,12 @@
 </template>
 
 <script>
+import TaskCreationPage from './createtasks.vue'; // Import the Task Creation Page component
+
 export default {
+  components: {
+    TaskCreationPage, // Register the component
+  },
   data() {
     return {
       currentView: 'accept', 
@@ -90,7 +95,7 @@ export default {
       ],
       currentTasks: [],
       showModal: false,
-      selectedTask: {}
+      selectedTask: {},
     };
   },
   methods: {
@@ -108,6 +113,9 @@ export default {
     closeModal() {
       this.showModal = false;
       this.selectedTask = {};
+    },
+    addTaskToCurrent(task) {
+      this.currentTasks.push({ ...task, status: 'Accepted' });
     }
   }
 };
