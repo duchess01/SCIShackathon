@@ -3,42 +3,41 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="navbar-links">
-        <button @click="currentView = 'accept'" :class="{ active: currentView === 'accept' }">Create Task</button>
         <button @click="currentView = 'current'" :class="{ active: currentView === 'current' }">Created Tasks</button>
       </div>
     </nav>
     <br>
     <!-- Content Based on Selected View -->
-    <div id="task-card-page">
-      <h1 style="text-align: center; font-family: Arial, sans-serif; color: #333;">Create a Task Card</h1>
-<div style="width: 400px; margin: 0 auto; padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); background-color: #f9f9f9;">
-    <form @submit.prevent="addTask">
-        <div style="margin-bottom: 15px;">
-            <label for="title" style="display: block; font-weight: bold; margin-bottom: 5px;">Title:</label>
-            <input v-model="title" type="text" id="title" required style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box;" />
-        </div>
-        <div style="margin-bottom: 15px;">
-            <label for="taskType" style="display: block; font-weight: bold; margin-bottom: 5px;">Task Type:</label>
-            <input v-model="taskType" type="text" id="taskType" required style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box;" />
-        </div>
-        <div style="margin-bottom: 15px;">
-            <label for="location" style="display: block; font-weight: bold; margin-bottom: 5px;">Location:</label>
-            <input v-model="location" type="text" id="location" required style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box;" />
-        </div>
-        <div style="margin-bottom: 15px;">
-            <label for="image" style="display: block; font-weight: bold; margin-bottom: 5px;">Timing</label>
-            <input v-model="image" type="datetime-local" id="time" required style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box;" />
-        </div>
-        <div style="margin-bottom: 15px;">
-            <label for="image" style="display: block; font-weight: bold; margin-bottom: 5px;">Image URL:</label>
-            <input v-model="image" type="text" id="image" required style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box;" />
-        </div>
-        <button type="submit" style="width: 100%; padding: 10px; border-radius: 5px; border: none; background-color: #007bff; color: white; font-size: 16px; cursor: pointer;">Add Task Card</button>
-    </form>
-</div>
+    <div class="card flex flex-col gap-4">
+                    <div class="font-semibold text-xl">Enter Task details</div>
+                    <div class="flex flex-col gap-2">
+                        <label for="name1">Title</label>
+                        <InputText id="name1" type="text" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="Description">Description</label>
+                        <InputText id="text" type="text" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="location">Location</label>
+                        <InputText id="location" type="text" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="time">Time</label>
+                        <InputText id="time" type="datetime-local" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="type">Task type</label>
+                        <select name="type" id="type">
+                        <option value="volvo">Individual</option>
+                        <option value="saab">Organization</option>
+                      </select>
+                    </div>
+                    <button>Create Task</button>
+                </div>
 
   </div>
-  </div>
+
 </template>
 
 <script>
