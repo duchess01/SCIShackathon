@@ -65,6 +65,19 @@ app.use(PrimeVue, {
         }
     }
 });
+
+router.beforeEach((to, from, next) => {
+    const userRole = localStorage.getItem('userRole');
+    
+    if (to.path === '/' && userRole === 'user') {
+        next('/user-dashboard');
+    } else if (to.path === '/user-dashboard' && userRole === 'admin') {
+        next('/');
+    } else {
+        next();
+    }
+});
+
 app.use(ToastService);
 app.use(ConfirmationService);
 app.component('Chart', Chart); 

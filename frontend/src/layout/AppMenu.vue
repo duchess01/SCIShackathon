@@ -3,6 +3,7 @@ import { ref } from 'vue';
 
 import AppMenuItem from './AppMenuItem.vue';
 
+
 const model = ref([
     {
         label: 'Home',

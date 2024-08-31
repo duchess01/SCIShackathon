@@ -9,8 +9,10 @@ const router = useRouter();
 
 const onLogin = () => {
     if (email.value === 'admin@example.com' && password.value === 'admin123') {
+        localStorage.setItem('userRole', 'admin');
         router.push('/');
     } else {
+        localStorage.setItem('userRole', 'user');
         router.push('/user-dashboard');
     }
 };
