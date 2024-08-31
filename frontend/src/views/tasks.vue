@@ -3,8 +3,24 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="navbar-links">
-        <button @click="currentView = 'accept'" :class="{ active: currentView === 'accept' }">Accept Task</button>
-        <button @click="currentView = 'current'" :class="{ active: currentView === 'current' }">Accepted Tasks</button>
+        <!-- PrimeVue Button for 'Accept Task' -->
+          <Button
+
+            label="Accept Task"
+            class="p-button p-component"
+            @click="currentView = 'accept'"
+            severity="success"  
+            :class="{ 'p-button-active': currentView === 'accept' }"
+          />
+          <!-- PrimeVue Button for 'Accepted Tasks' -->
+          <Button
+
+            label="Accepted Tasks"
+            class="p-button p-component"
+            @click="currentView = 'current'"
+            severity="secondary"  
+            :class="{ 'p-button-active': currentView === 'current' }"
+          />
       </div>
     </nav>
     <br>
@@ -19,8 +35,16 @@
             <h3>{{ task.title }}</h3>
             <p><strong>Type:</strong> {{ task.type }}</p>
             <p><strong>Location:</strong> {{ task.location }}</p>
-            <button class="button-green" @click="acceptTask(task.id)">Accept</button>
-            <button class="button-blue" @click="openModal(task)">Read More</button>
+            <Button @click="acceptTask(task.id)" style="margin-right: 5%; padding-left: 10%; padding-right: 10%;">Accept</Button>
+            <Button
+            label="Read More"
+            severity="secondary"
+            outlined
+            style="padding-left: 10%; padding-right: 10%;"
+            @click="openModal(task)">
+          </Button>
+
+
           </div>
         </div>
       </div>
@@ -55,7 +79,7 @@
         <p><strong>Type:</strong> {{ selectedTask.type }}</p>
         <p><strong>Timing:</strong> {{ selectedTask.timing }}</p>
         <p><strong>Task Type:</strong> {{ selectedTask.isOrganization ? 'Organization' : 'Individual' }}</p>
-        <button @click="closeModal">Close</button>
+        <Button @click="closeModal"> Close </Button>
       </div>
     </div>
   </div>
@@ -212,19 +236,7 @@ h2 {
   margin-top: 0;
 }
 
-/* Button Styles */
-.button-green, .button-blue {
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5px;
-}
+
 
 /* Green button */
 .button-green {

@@ -238,6 +238,17 @@ watch([getPrimary, getSurface, isDarkTheme], () => {
             </template>
         </Column>
 
+        <Column field="name" header="Karma" style="min-width: 12rem">
+                <template #body="{ data }">
+                    {{ data.points }}
+                </template>
+                <template #filter="{ filterModel }">
+                    <InputText v-model="filterModel.value" type="text" placeholder="Search by points" />
+                </template>
+            </Column>
+
+        
+
             <Column field="name" header="Volunteer Name" style="min-width: 12rem">
                 <template #body="{ data }">
                     {{ data.name }}

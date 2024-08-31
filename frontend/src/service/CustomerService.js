@@ -17,7 +17,8 @@ export const CustomerService = {
                     image: 'ionibowcher.png'
                 },
                 balance: 70663,
-                task: 'Volunteer Companion for Elderly'
+                task: 'Volunteer Companion for Elderly',
+                points: 100
             },
             {
                 id: 1001,
@@ -35,7 +36,8 @@ export const CustomerService = {
                     image: 'amyelsner.png'
                 },
                 balance: 82429,
-                task: 'Organize Senior Activity Events'
+                task: 'Organize Senior Activity Events',
+                points: 100
             },
             {
                 id: 1002,
@@ -53,7 +55,8 @@ export const CustomerService = {
                     image: 'asiyajavayant.png'
                 },
                 balance: 28334,
-                task: 'Senior Care Assistance Program'
+                task: 'Senior Care Assistance Program',
+                points: 100
             },
             // Add more customers as needed
         ];
