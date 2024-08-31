@@ -79,7 +79,7 @@
         <p><strong>Type:</strong> {{ selectedTask.type }}</p>
         <p><strong>Timing:</strong> {{ selectedTask.timing }}</p>
         <p><strong>Task Type:</strong> {{ selectedTask.isOrganization ? 'Organization' : 'Individual' }}</p>
-        <button @click="closeModal">Close</button>
+        <Button @click="closeModal"> Close </Button>
       </div>
     </div>
   </div>
@@ -236,19 +236,7 @@ h2 {
   margin-top: 0;
 }
 
-/* Button Styles */
-.button-green, .button-blue {
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5px;
-}
+
 
 /* Green button */
 .button-green {
