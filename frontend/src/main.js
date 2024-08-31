@@ -73,8 +73,12 @@ router.beforeEach((to, from, next) => {
         next('/user-dashboard');
     } else if (to.path === '/user-dashboard' && userRole === 'admin') {
         next('/');
-    } else {
-        next();
+    }
+
+        // Allow other routes to proceed
+        else {
+            next();
+        
     }
 });
 

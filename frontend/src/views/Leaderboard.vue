@@ -3,11 +3,6 @@
       <!-- Page Title -->
       <h1 class="text-5xl font-bold text-center mb-8">Reward Redemption</h1>
   
-      <!-- User Karma Points -->
-      <div class="user-karma text-center mb-8 p-4 bg-gradient-to-r from-[#b6f492] to-[#338b93] rounded-lg shadow-md">
-        <h2 class="text-3xl font-semibold">Your Karma Points: {{ karmaPoints }}</h2>
-      </div>
-  
       <!-- Leaderboard Section -->
       <div class="leaderboard-section mb-12">
         <h2 class="text-4xl font-semibold text-center mb-6">Leaderboard</h2>
@@ -26,26 +21,9 @@
         </div>
       </div>
   
-      <!-- Rewards Section -->
-      <div class="rewards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
-        <div
-          v-for="reward in rewards"
-          :key="reward.id"
-          class="p-4 rounded-lg shadow-lg text-center hover:shadow-xl transition duration-300"
-        >
-          <img :src="reward.image" alt="Reward Image" class="w-full h-40 object-contain mb-4" />
-          <h3 class="font-bold text-xl mb-2">{{ reward.name }}</h3>
-          <p class="text-gray-500 font-semibold text-lg mb-4">{{ reward.requiredKarma }} Karma</p>
-          <button
-            class="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-800 transition duration-300"
-            :disabled="karmaPoints < reward.requiredKarma"
-            @click="redeemReward(reward)"
-          >
-            Redeem
-          </button>
+      
         </div>
-      </div>
-    </div>
+
   </template>
   
   // remove when connecting to db

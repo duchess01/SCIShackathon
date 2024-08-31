@@ -34,6 +34,10 @@ const router = createRouter({
                     name: 'tasks',
                     component: () => import('@/views/tasks.vue')
                 },
+                {   path: '/leaderboard',
+                    name: 'leaderboard',
+                    component: () => import('@/views/Leaderboard.vue')
+                },
                 {
                     path: '/createtasks',
                     name: 'createtasks',
