@@ -69,10 +69,12 @@ app.use(PrimeVue, {
 router.beforeEach((to, from, next) => {
     const userRole = localStorage.getItem('userRole');
     
-    if (to.path === '/' && userRole === 'user') {
+    if (to.path === '/') {
+        next('/landing');
+    } else if (to.path === '/dashboard' && userRole === 'user') {
         next('/user-dashboard');
     } else if (to.path === '/user-dashboard' && userRole === 'admin') {
-        next('/');
+        next('/dashboard');
     }
 
         // Allow other routes to proceed

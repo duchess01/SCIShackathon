@@ -12,7 +12,7 @@ const model = computed(() => {
     {
       label: 'Home',
       items: [
-        { label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' },
+        { label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/dashboard' },
         // Conditionally show Rewards or Leaderboard based on user role
         ...(userRole.value === 'admin' ? 
           [{ label: 'Leaderboard', icon: 'pi pi-fw pi-star', to: '/leaderboard' }] :

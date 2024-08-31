@@ -8,8 +8,15 @@ const router = createRouter({
             path: '/',
             component: AppLayout,
             children: [
+
                 {
                     path: '/',
+                    name: 'landing',
+                    component: () => import('@/views/pages/Landing.vue')
+                },
+
+                {
+                    path: '/dashboard',
                     name: 'dashboard',
                     component: () => import('@/views/Dashboard.vue')
                 },
