@@ -4,7 +4,7 @@
       <h1 class="text-5xl font-bold text-center mb-8">Reward Redemption</h1>
   
       <!-- User Karma Points -->
-      <div class="user-karma text-center mb-8 p-4 bg-gradient-to-r from-yellow-400 to-yellow-200 rounded-lg shadow-md">
+      <div class="user-karma text-center mb-8 p-4 bg-gradient-to-r from-[#b6f492] to-[#338b93] rounded-lg shadow-md">
         <h2 class="text-3xl font-semibold">Your Karma Points: {{ karmaPoints }}</h2>
       </div>
   
