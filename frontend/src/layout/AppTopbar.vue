@@ -68,10 +68,17 @@ const { onMenuToggle, toggleDarkMode, isDarkTheme } = useLayout();
                         <i class="pi pi-inbox"></i>
                         <span>Messages</span>
                     </button>
-                    <button type="button" class="layout-topbar-action">
+                    <router-link to="/profile" class="layout-topbar-action">
+                        <button type="button" class="layout-topbar-action" @click="toggleDropdown">
                         <i class="pi pi-user"></i>
                         <span>Profile</span>
                     </button>
+                    <!-- Profile Dropdown -->
+                    <div v-if="isDropdownOpen" class="dropdown-menu absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md border border-gray-200">
+                        <router-link to="/profile" @click.native="closeDropdown" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Profile</router-link>
+                        <button @click="handleLogout" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 w-full text-left">Log Out</button>
+                    </div>
+                </router-link>
                 </div>
             </div>
         </div>
