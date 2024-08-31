@@ -31,26 +31,37 @@ const connectDB = async () => {
 connectDB();
 
 // Example routes, USE POSTMAN TO TEST
-app.post('/api/users', async (req, res) => {
-  try {
-    const newUser = new User(req.body);
-    await newUser.save();
-    res.status(201).json(newUser);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-app.post('/api/tasks', async (req, res) => {
-  try {
-    const newTask = new Task(req.body);
-    await newTask.save();
-    res.status(201).json(newTask);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
+// Get all users
+app.get('/api/users', async (req, res) => {
+    try {
+      const users = await User.find(); // Fetch all users from the database
+      res.json(users);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+  
+  // Add a new user
+  app.post('/api/users', async (req, res) => {
+    try {
+      const newUser = new User(req.body);
+      await newUser.save();
+      res.status(201).json(newUser);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+  
+  // Add a new task
+  app.post('/api/tasks', async (req, res) => {
+    try {
+      const newTask = new Task(req.body);
+      await newTask.save();
+      res.status(201).json(newTask);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
 // Start server
 const PORT = process.env.PORT || 6000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

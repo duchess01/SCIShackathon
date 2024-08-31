@@ -38,3 +38,28 @@
                 </div>
 
 </template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      user: null, // Initialize user data as null
+    };
+  },
+  methods: {
+    async fetchUser() {
+      try {
+        const response = await axios.get('http://localhost:5000/api/users/123'); //TODO: ADD FAKE USERS
+        this.user = response.data;
+      } catch (error) {
+        console.error('Error fetching user:', error);
+      }
+    },
+  },
+  created() {
+    this.fetchUser(); // Fetch user data when the component is created
+  },
+};
+</script>
