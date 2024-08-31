@@ -83,6 +83,14 @@
       </div>
     </div>
   </div>
+
+  <df-messenger
+    intent="WELCOME"
+    chat-title="Taskbot"
+    agent-id="f93b7b22-a24a-41bf-b2a3-d5b84f208202"
+    language-code="en">
+</df-messenger>
+  
 </template>
 
 <script>
@@ -109,7 +117,7 @@ export default {
         {
           id: 2,
           title: 'Organize Senior Activity Events',
-          description: 'Assist with Organizing the annual community charity eventby planning the necessary logistics and activities involved.',
+          description: 'Assist with Organizing the annual community charity event by planning the necessary logistics and activities involved.',
           location: 'Yishun',
           type: 'Event',
           timing: '02/09/2019 4 hours',
@@ -119,7 +127,7 @@ export default {
         {
           id: 3,
           title: 'Senior Care Assistance Program',
-          description: 'Be involved in the educational efforts related to caregiving of the senior members in the community..',
+          description: 'Be involved in the educational efforts related to caregiving of the senior members in the community.',
           location: 'Fengshan',
           type: 'Event',
           timing: '05/13/2017 2 hours',
@@ -151,6 +159,17 @@ export default {
     addTaskToCurrent(task) {
       this.currentTasks.push({ ...task, status: 'Accepted' });
     }
+  },
+  mounted() {
+    const script = document.createElement('script');
+    script.src = 'https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js';
+    script.defer = true;
+    document.head.appendChild(script);
+
+    // Optionally, add an onload event listener to confirm the script has been loaded
+    script.onload = () => {
+      console.log('Dialogflow Messenger script loaded successfully.');
+    };
   }
 };
 </script>
