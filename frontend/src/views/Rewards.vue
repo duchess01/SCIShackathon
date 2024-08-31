@@ -4,7 +4,7 @@
       <h1 class="text-5xl font-bold text-center mb-8">Reward Redemption</h1>
   
       <!-- User Karma Points -->
-      <div class="user-karma text-center mb-8 p-4 bg-gradient-to-r from-yellow-400 to-yellow-200 rounded-lg shadow-md">
+      <div class="user-karma text-center mb-8 p-4 bg-gradient-to-r from-[#b6f492] to-[#338b93] rounded-lg shadow-md">
         <h2 class="text-3xl font-semibold">Your Karma Points: {{ karmaPoints }}</h2>
       </div>
   
@@ -55,12 +55,12 @@
       return {
         karmaPoints: 12000, // Example value; replace with real data
         rewards: [
-          { id: 1, name: 'Lazada Gift Card $ 50', requiredKarma: 5000, image: 'https://via.placeholder.com/150' },
-          { id: 2, name: 'Aeon Voucher $ 50', requiredKarma: 6000, image: 'https://via.placeholder.com/150' },
-          { id: 3, name: 'Starbucks Voucher $ 50', requiredKarma: 6000, image: 'https://via.placeholder.com/150' },
-          { id: 4, name: 'Coffee Bean Voucher $ 50', requiredKarma: 6000, image: 'https://via.placeholder.com/150' },
-          { id: 5, name: 'Secret Recipe Voucher $ 50', requiredKarma: 6000, image: 'https://via.placeholder.com/150' },
-          { id: 6, name: 'KFC Voucher $ 50', requiredKarma: 6000, image: 'https://via.placeholder.com/150' },
+          { id: 1, name: 'Lazada Gift Card $ 50', requiredKarma: 5000, image: '../../public/demo/images/laz.png' },
+          { id: 2, name: 'Aeon Voucher $ 50', requiredKarma: 6000, image: '../../public/demo/images/aeon.jpg' },
+          { id: 3, name: 'Starbucks Voucher $ 50', requiredKarma: 6000, image: '../../public/demo/images/starbuc.png' },
+          { id: 4, name: 'Coffee Bean Voucher $ 50', requiredKarma: 6000, image: '../../public/demo/images/cof.jpg' },
+          { id: 5, name: 'Secret Recipe Voucher $ 50', requiredKarma: 6000, image: '../../public/demo/images/sec.png' },
+          { id: 6, name: 'KFC Voucher $ 50', requiredKarma: 6000, image: '../../public/demo/images/kfc.png' },
         ],
         leaderboard: [
           { id: 1, name: 'Alice', score: 15000 },

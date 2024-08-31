@@ -10,8 +10,8 @@
     <br>
     <!-- Content Based on Selected View -->
     <div v-if="currentView === 'accept'">
-      <h2>Accept Task</h2>
-      <p>Here you can accept tasks. A list of available tasks will be shown here.</p>
+      <h1>Accept Task</h1>
+      <p>Accept tasks and earn 100 Karma per successfully completed task!</p>
       <div class="card-container">
         <div class="card" v-for="task in availableTasks" :key="task.id">
           <img :src="task.image" alt="Task Image" class="card-image"/>
@@ -27,8 +27,8 @@
     </div>
 
     <div v-if="currentView === 'current'">
-      <h2>Accepted Tasks</h2>
-      <p>Here are the current tasks you have accepted. Details of tasks and status will be shown here.</p>
+      <h1>Accepted Tasks</h1>
+      <p>Here are your accepted Tasks</p>
       <div class="card-container">
         <div class="card" v-for="task in currentTasks" :key="task.id">
           <img :src="task.image" alt="Task Image" class="card-image"/>
@@ -74,23 +74,33 @@ export default {
       availableTasks: [
         {
           id: 1, 
-          title: 'Kill a Lizard',
-          description: 'Kill a lizard in the backyard.',
-          location: 'abc street',
-          type: 'Cleanup',
-          timing: '2 hours',
+          title: 'Elderly Volunteer companion',
+          description: 'Join and guide the elderly on their day to day activities in the community such as Medical appointments.',
+          location: 'Hougang',
+          type: 'Engagement',
+          timing: '19/13/2015 for 2 hours',
           isOrganization: false,
-          image: 'https://via.placeholder.com/300x200?text=Clean+the+Park'
+          image: '../../public/demo/images/park.jpg'
         },
         {
           id: 2,
-          title: 'Organize community event',
-          description: 'Organize the annual community charity event.',
-          location: 'Community Hall',
+          title: 'Organize Senior Activity Events',
+          description: 'Assist with Organizing the annual community charity eventby planning the necessary logistics and activities involved.',
+          location: 'Yishun',
           type: 'Event',
-          timing: '4 hours',
+          timing: '02/09/2019 4 hours',
           isOrganization: true,
-          image: 'https://via.placeholder.com/300x200?text=Community+Event'
+          image: '../../public/demo/images/char.png'
+        },
+        {
+          id: 3,
+          title: 'Senior Care Assistance Program',
+          description: 'Be involved in the educational efforts related to caregiving of the senior members in the community..',
+          location: 'Fengshan',
+          type: 'Event',
+          timing: '05/13/2017 2 hours',
+          isOrganization: true,
+          image: '../../public/demo/images/senior.jpg'
         }
       ],
       currentTasks: [],
