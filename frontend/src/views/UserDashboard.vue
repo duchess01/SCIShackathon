@@ -1,6 +1,6 @@
 <script setup>
 import { useLayout } from '@/layout/composables/layout';
-import { onMounted, ref, watch, onBeforeMount, reactive } from 'vue';
+import { onMounted, ref, watch, onBeforeMount, reactive, computed } from 'vue';
 import { CustomerService } from '@/service/CustomerService';
 import { ProductService } from '@/service/ProductService';
 import { TaskService } from '@/service/TaskService';
@@ -73,12 +73,15 @@ onBeforeMount(() => {
         customers1.value = data;
         loading1.value = false;
         customers1.value.forEach((customer) => (customer.date = new Date(customer.date)));
+        spliceCustomers();
     });
  
     TaskService.getTasks().then((data) => (tasks.value = data));
+    
 
     initFilters1();
 });
+
 
 function initFilters1() {
     filters1.value = {
@@ -187,6 +190,11 @@ watch([getPrimary, getSurface, isDarkTheme], () => {
     chartOptions.value = setChartOptions();
 });
 
+function spliceCustomers() {
+    if (customers1.value.length > 0) {
+        customers1.value.splice(0, 2); // Remove the first customer from the list
+    }
+}
 
 </script>
 
@@ -196,7 +204,7 @@ watch([getPrimary, getSurface, isDarkTheme], () => {
 
         
         <DataTable
-            :value="customers1.slice(0, 1)"
+            :value="customers1"
             :paginator="true"
             :rows="10"
             dataKey="id"
@@ -238,7 +246,14 @@ watch([getPrimary, getSurface, isDarkTheme], () => {
             </template>
         </Column>
 
-
+            <Column field="name" header="Volunteer Name" style="min-width: 12rem">
+                <template #body="{ data }">
+                    {{ data.name }}
+                </template>
+                <template #filter="{ filterModel }">
+                    <InputText v-model="filterModel.value" type="text" placeholder="Search by name" />
+                </template>
+            </Column>
             <Column header="Neighbourhood" filterField="Neighbourhood.name" style="min-width: 12rem">
                 <template #body="{ data }">
                     <div class="flex items-center gap-2">
