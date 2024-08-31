@@ -71,7 +71,9 @@ router.beforeEach((to, from, next) => {
     
     if (to.path === '/') {
         next('/landing');
-    } else if (to.path === '/dashboard' && userRole === 'user') {
+    }
+    
+    if (to.path === '/dashboard' && userRole === 'user') {
         next('/user-dashboard');
     } else if (to.path === '/user-dashboard' && userRole === 'admin') {
         next('/dashboard');
