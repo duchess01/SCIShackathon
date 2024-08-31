@@ -9,29 +9,24 @@ const userRole = ref(localStorage.getItem('userRole'));
 const model = computed(() => {
   // Define the common menu items
   const items = [
-    {
+      {
       label: 'Home',
       items: [
         { label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/dashboard' },
-        // Conditionally show Rewards or Leaderboard based on user role
-        ...(userRole.value === 'admin' ? 
-          [{ label: 'Leaderboard', icon: 'pi pi-fw pi-star', to: '/leaderboard' }] :
-          [{ label: 'Rewards', icon: 'pi pi-fw pi-star', to: '/rewards' }]
-        )
+ 
+        ...(userRole.value === 'admin' 
+          ? [{ label: 'Leaderboard', icon: 'pi pi-fw pi-star', to: '/leaderboard' }] 
+          : [{ label: 'Rewards', icon: 'pi pi-fw pi-star', to: '/rewards' }]
+        ),
+      
+        { 
+          label: 'Tasks',
+          icon: 'pi pi-fw pi-id-card',
+          to: userRole.value === 'admin' ? '/createtasks' : '/tasks'
+        }
       ]
     },
-    {
-      label: 'UI Components',
-      items: [
-        { label: 'Tasks',
-          icon: 'pi pi-fw pi-id-card',
-          to: userRole.value === 'admin' ? '/createtasks' : '/tasks'},
 
-
-        // { label: 'List', icon: 'pi pi-fw pi-list', to: '/uikit/list' },
-
-      ]
-    }
   ];
  
   return items;
