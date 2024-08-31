@@ -10,7 +10,7 @@ export const TaskService = {
                 date: new Date('2024-08-29'),
                 time: '10:00 AM',
                 description: 'Description for task one',
-                assignedTo: 'John Doe',
+                assignedTo: ['John Doe'],
                 category: 'Development'
             },
             {
@@ -21,7 +21,7 @@ export const TaskService = {
                 date: new Date('2024-08-28'),
                 time: '02:00 PM',
                 description: 'Description for task two',
-                assignedTo: 'Jane Smith',
+                assignedTo: ['Jane Smith'],
                 category: 'Testing'
             },
             {
@@ -32,7 +32,7 @@ export const TaskService = {
                 date: new Date('2024-08-30'),
                 time: '04:00 PM',
                 description: 'Description for task three',
-                assignedTo: 'Alice Johnson',
+                assignedTo: ['Alice Johnson'],
                 category: 'Documentation'
             },
         ];

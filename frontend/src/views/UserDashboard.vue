@@ -196,7 +196,7 @@ watch([getPrimary, getSurface, isDarkTheme], () => {
 
         
         <DataTable
-            :value="customers1"
+            :value="customers1.slice(0, 1)"
             :paginator="true"
             :rows="10"
             dataKey="id"
@@ -238,14 +238,7 @@ watch([getPrimary, getSurface, isDarkTheme], () => {
             </template>
         </Column>
 
-            <Column field="name" header="Volunteer Name" style="min-width: 12rem">
-                <template #body="{ data }">
-                    {{ data.name }}
-                </template>
-                <template #filter="{ filterModel }">
-                    <InputText v-model="filterModel.value" type="text" placeholder="Search by name" />
-                </template>
-            </Column>
+
             <Column header="Neighbourhood" filterField="Neighbourhood.name" style="min-width: 12rem">
                 <template #body="{ data }">
                     <div class="flex items-center gap-2">

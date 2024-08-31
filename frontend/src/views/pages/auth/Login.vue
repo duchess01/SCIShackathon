@@ -1,12 +1,20 @@
 <script setup>
-import FloatingConfigurator from '@/components/FloatingConfigurator.vue';
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 const email = ref('');
 const password = ref('');
 const checked = ref(false);
-</script>
+const router = useRouter();
 
+const onLogin = () => {
+    if (email.value === 'admin@example.com' && password.value === 'admin123') {
+        router.push('/');
+    } else {
+        router.push('/user-dashboard');
+    }
+};
+</script>
 <template>
     <FloatingConfigurator />
     <div class="bg-surface-50 dark:bg-surface-950 flex items-center justify-center min-h-screen min-w-[100vw] overflow-hidden">
@@ -49,7 +57,8 @@ const checked = ref(false);
                             </div>
                             <span class="font-medium no-underline ml-2 text-right cursor-pointer text-primary">Forgot password?</span>
                         </div>
-                        <Button label="Sign In" class="w-full" as="router-link" to="/"></Button>
+                        <Button label="Sign In" class="w-full" @click="onLogin"></Button>
+
                     </div>
                 </div>
             </div>

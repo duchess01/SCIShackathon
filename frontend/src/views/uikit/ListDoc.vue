@@ -1,6 +1,6 @@
 <script setup>
 import { ProductService } from '@/service/ProductService';
-import { TaskService } from '@/service/TaskService';
+import {VolunteerService} from '@/service/VolunteerService';
 import { onMounted, ref } from 'vue';
 
 const products = ref(null);
@@ -35,7 +35,7 @@ function getSeverity(product) {
 <template>
     <div class="flex flex-col">
         <div class="card">
-            <div class="font-semibold text-xl">DataView</div>
+            <div class="font-semibold text-xl">List of New Volunteers</div>
             <DataView :value="products" :layout="layout">
                 <template #header>
                     <div class="flex justify-end">
