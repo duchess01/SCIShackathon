@@ -1,15 +1,20 @@
 // backend/app.js
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 require('dotenv').config();
 
 // Import Mongoose models
 const User = require('./models/User');
 const Task = require('./models/Task');
 
+
+
 const app = express();
 
+
 // Middleware
+app.use(cors({ origin: 'http://localhost:5173' })); // Adjust if the frontend runs on a different port
 app.use(express.json());
 
 // Connect to MongoDB
@@ -47,5 +52,5 @@ app.post('/api/tasks', async (req, res) => {
 });
 
 // Start server
-const PORT = process.env.PORT || 5173;
+const PORT = process.env.PORT || 6000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
