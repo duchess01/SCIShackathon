@@ -33,6 +33,7 @@ connectDB();
 // Example routes, USE POSTMAN TO TEST
 // Get all users
 app.get('/api/users', async (req, res) => {
+    console.log("GET REQUEST RECEIVED")
     try {
       const users = await User.find(); // Fetch all users from the database
       res.json(users);

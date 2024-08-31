@@ -11,7 +11,8 @@ export const TaskService = {
                 time: '10:00 AM',
                 description: 'Description for task one',
                 assignedTo: ['John Doe'],
-                category: 'Development'
+                category: 'Development',
+                karmaPoints:'100'
             },
             {
                 id: 2,
@@ -22,7 +23,9 @@ export const TaskService = {
                 time: '02:00 PM',
                 description: 'Description for task two',
                 assignedTo: ['Jane Smith'],
-                category: 'Testing'
+                category: 'Testing',
+                karmaPoints:'200'
+
             },
             {
                 id: 3,
@@ -33,7 +36,9 @@ export const TaskService = {
                 time: '04:00 PM',
                 description: 'Description for task three',
                 assignedTo: ['Alice Johnson'],
-                category: 'Documentation'
+                category: 'Documentation',
+                karmaPoints:'300'
+
             },
         ];
     },
