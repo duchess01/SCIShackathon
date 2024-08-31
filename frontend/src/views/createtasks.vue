@@ -37,6 +37,12 @@
                 </div>
 
   </div>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="Taskbot"
+    agent-id="f93b7b22-a24a-41bf-b2a3-d5b84f208202"
+    language-code="en">
+</df-messenger>
 
 </template>
 
@@ -72,7 +78,20 @@ export default {
       this.image = "";
     },
   },
+
+  mounted() {
+    const script = document.createElement('script');
+    script.src = 'https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js';
+    script.defer = true;
+    document.head.appendChild(script);
+
+    // Optionally, add an onload event listener to confirm the script has been loaded
+    script.onload = () => {
+      console.log('Dialogflow Messenger script loaded successfully.');
+    };
+  },
 };
+
 </script>
 <style scoped>
 #task-card-page {
