@@ -1,4 +1,3 @@
-
 # Karmunity
 
 ## Overview
@@ -32,6 +31,47 @@ Access the live application at [Karmunity](https://karmunity.vercel.app/landing)
 ### Prerequisites
 - **Node.js** and **npm** installed
 - **Python** environment
-- Install the required packages:
-  ```bash
-  pip install -r requirements.txt
+
+### Setup Instructions
+
+1. **Backend Setup:**
+   - Open a terminal and navigate to the backend directory:
+     ```bash
+     cd backend
+     ```
+   - Install the dependencies:
+     ```bash
+     npm install
+     ```
+   - Start the backend server:
+     ```bash
+     node app.js
+     ```
+
+2. **Frontend Setup:**
+   - Open a second terminal and navigate to the frontend directory:
+     ```bash
+     cd frontend
+     ```
+   - Install the dependencies:
+     ```bash
+     npm install
+     ```
+   - Run the frontend development server:
+     ```bash
+     npm run dev
+     ```
+
+### Running the Project
+- Ensure both terminals are running simultaneously for the backend (`node app.js`) and the frontend (`npm run dev`).
+
+## Key Challenges Addressed
+- **Mobility Issues**: Provides direct assistance with tasks requiring physical mobility.
+- **Social Isolation**: Increases social interaction to combat loneliness.
+- **Limited Resources**: Enables task-sharing among community members to minimize costly professional services.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md) file for details.
+
+## Contact
+For further information, please contact [your-email@example.com].
