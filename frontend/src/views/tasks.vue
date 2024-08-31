@@ -10,7 +10,7 @@
     <br>
     <!-- Content Based on Selected View -->
     <div v-if="currentView === 'accept'">
-      <h2>Accept Task</h2>
+      <h1>Accept Task</h1>
       <p>Accept tasks and earn 100 Karma per successfully completed task!</p>
       <div class="card-container">
         <div class="card" v-for="task in availableTasks" :key="task.id">
@@ -27,7 +27,7 @@
     </div>
 
     <div v-if="currentView === 'current'">
-      <h2>Accepted Tasks</h2>
+      <h1>Accepted Tasks</h1>
       <p>Here are your accepted Tasks</p>
       <div class="card-container">
         <div class="card" v-for="task in currentTasks" :key="task.id">
